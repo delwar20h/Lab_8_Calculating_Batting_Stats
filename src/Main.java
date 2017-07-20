@@ -16,6 +16,7 @@ public class Main {
             // At bats determines the number of elements in the array.
             System.out.print("Enter number of at bats: ");
             atBats = scan.nextInt();
+            System.out.println();
 
             int[] resultOfAtBats = new int[atBats];
 
@@ -29,6 +30,7 @@ public class Main {
 
                 } while (resultOfAtBats[i] < 0 || resultOfAtBats[i] > 4);
             }
+            System.out.println();
 
             // Calls method to add the result of each at-bat.
             totalBases = getTotalBases(totalBases, resultOfAtBats);
@@ -37,6 +39,7 @@ public class Main {
             // Calls method to count the number of non-zero inputs (hits).
             counter = getCounter(counter, resultOfAtBats);
             System.out.println("Batting average: " + numberFormat.format((double) counter / atBats));
+            System.out.println();
 
             scan.nextLine();
             System.out.println("Another batter? (y/n): ");
